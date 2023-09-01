@@ -4,7 +4,8 @@
 use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
 
-Route::prefix('user')->middleware('auth')->group(function() {
+//Вставить перед ->group--- ->middleware('auth') ---
+Route::prefix('user')->group(function() {
     
     Route::redirect('/', '/user/cars')->name('user');
 

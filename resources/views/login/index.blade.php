@@ -1,10 +1,12 @@
 @extends('layouts.base')
 
+@section('page.title','Страница входа')
+
 
 @section('content')
 
 <h1>
-    Страница входа
+    Вход
 </h1>
 
 @endsection
