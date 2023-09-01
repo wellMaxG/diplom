@@ -4,7 +4,10 @@
 use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
 
-Route::prefix('user')->group(function() {
+Route::prefix('user')->middleware('auth')->group(function() {
+    
+    Route::redirect('/', '/user/cars')->name('user');
+
     Route::get('/cars', [UserController::class, 'index'])->name('user.cars');
     Route::get('/cars/create', [UserController::class, 'create'])->name('user.cars.create');
     Route::post('/cars', [UserController::class, 'store'])->name('user.cars.store');
