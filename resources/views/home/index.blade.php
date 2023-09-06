@@ -4,7 +4,7 @@
 @section('content')
 
 <h1>
-    Страница входа
+    Главная страница
 </h1>
 
 @endsection
